@@ -102,10 +102,10 @@ export const projects = {
 			title: "Idea Factory",
 			description: "A web application that provides platform for people to share their project ideas and find collaborators.",
 			icons: [
-				{
-					icon: faChrome,
-					link: "https://www.ideafactoryuw.com/",
-				},
+				// {
+				// 	icon: faChrome,
+				// 	link: "https://www.ideafactoryuw.com/",
+				// },
 				{
 					icon: faGithub,
 					link: "https://github.com/orgs/uwIdeaFactory/repositories",
@@ -128,6 +128,10 @@ export const projects = {
 			title: "HuskyShake",
 			description: "A location-based app designed for the UW campus to help students communicate and find study partners, events, and more based on their location.",
 			icons: [
+				{
+					icon: faChrome,
+					link: "https://devpost.com/software/huskyshake",
+				},
 				{
 					icon: faGithub,
 					link: "https://github.com/HuskyShake/demo-repository",
