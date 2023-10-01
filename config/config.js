@@ -13,6 +13,14 @@ export const navigation = {
 			link: "#about",
 		},
 		{
+			title: "Education",
+			link: "#education",
+		},
+		{
+			title: "Experience",
+			link: "#experience",
+		},
+		{
 			title: "Projects",
 			link: "#projects",
 		},
@@ -38,7 +46,7 @@ export const intro = {
 		},
 		{
 			title: "Resume",
-			link: "https://drive.google.com/file/d/10uXyQMr-CkaPliQG_WsTTsFN0UnSF_Dk/view?usp=sharing",
+			link: "https://drive.google.com/file/d/1GB9PWAnfy3N_eL6sRN51-L_O-7mWRgoM/view?usp=sharing",
 			isPrimary: false,
 		},
 	],
@@ -47,40 +55,43 @@ export const intro = {
 export const about = {
 	title: "Who I am",
 	description: [
-		"I'm an undergraduate student at University of Washington, Seattle, double majoring in Computer Science and Applied Computational and Mathematical Science and plan to graduate in Spring 2023. ",
-		"I'm passionate about software engineering since I love to build impactful solutions that can help people and always open to new ideas and opportunities. Building many projects in the past few years, I have gained a lot of experience about software engineering and machine learning especially in Java, Python, and JavaScript.",
-		"I'm enthusiastic about Researching and Teaching too. I taught CSE 413: Programming Language and Implementation in Spring 2023 and I'm currently working on a research project about Automated Testing Generation with Professor Michael Ernst.",
+		"I'm an undergraduate student at University of Washington, Seattle, double majoring in Computer Science and Applied Computational and Mathematical Science and plan to graduate in Spring 2024. ",
+		"I'm passionate about software engineering since I love to build impactful solutions that can help people and always open to new ideas and opportunities. Having undertaken numerous projects in recent years, I have acquired extensive experience in the domains of software engineering and machine learning, with a strong focus on Java, Python, JavaScript, and related frameworks and middlewares.",
+		"I'm enthusiastic about Researching and Teaching too. I taught CSE 413 and CSE 341: Programming Language and Implementation in Spring 2023 and Fall 2023. Additionally, I'm currently working on a research project about Automated Testing Generation with Professor Michael Ernst in UW's PLSE lab.",
 		"Besides programming, I love playing games and creating content on Social Medias. And I'm currently learning Unity2D and looking for building my own games."
 	],
 }
 
-// export const work = {
-// 	title: "What I do",
-// 	cards: [
-// 		{
-// 			title: "Mobile App Development",
-// 			description: "I create pixel perfect iOS and Andriod apps using Flutter.",
-// 			icons: null,
-// 		},
-// 		{
-// 			title: "Web Development",
-// 			description: "I create responsive static websites using Reactjs.",
-// 			icons: null,
-// 		}
-// 	],
-// }
 
 export const education = {
 	title: "Education",
 	chunks: [
 		{
-			title: "University of Washington",
+			title: "University of Washington - Seattle Campus",
 			location: "Seattle, WA",
 			degree: "Bachelor of Science in Computer Science, Bachelor of Science in Applied Computational and Mathematical Science",
-			date: "September 2020 - June 2024 (Expected)",
-			courses: ["Software Engineering", 'Machine Learning', 'Deep Learning', 'Artificial Intelligence', 'Algorithm', 'Database Systems', 'System Programming'],
+			date: "September 2020 - June 2024",
+			courses: ["Software Engineering", 'Programming Language', 'Algorithm', 'Database Systems', 'System Programming', 'Machine Learning', 'Deep Learning', 'Artificial Intelligence'],
 			GPA: "3.8/4.0",
 		},
+	],
+}
+
+export const experience = {
+	title: "Experience",
+	chunks: [
+		{
+			title: "Software Development Engineer Intern - BackEnd",
+			company: "Ant Group",
+			location: "Shanghai, China",
+			description: [
+				"Developed and optimized critical APIs and features for high-availability applications, ensuring compliance with regulatory requirements, minimizing online banking business risk, and elevating operational efficiency",
+				"Collaborated with fellow software engineers and led the frontend team to meet business and product requirements, overseeing maintenance and enhancement of critical features vital to the organization\'s objective",
+				"Employed Sofaboot, asynchronous command, batch-processing frameworks, oceanbase, and message queue technologies to streamline the software development lifecycle, bolstering development speed and scalability.",
+				"Acquired proficiency in end-to-end software development processes, encompassing rigorous self-testing across diverse environments, configuring gray environment switches for controlled deployments, proactive monitoring, and proactively establishing contingency plans to address potential online risks proactively."],
+			date: "June 2023 - September 2023",
+			skills: ["Java", "Spring Boot", "MySQL", "MyBatis", "Oceanbase", "SofaBoot", "Asynchronous Command", "Batch Processing"],
+		}
 	],
 }
 
@@ -225,7 +236,7 @@ export const SEO = {
 export const links = {
 	image: profile.src,
 	title: "@zihej2",
-	description: "Software Engineer | Student @ UW | Researcher @ UW",
+	description: "Software Engineer | Student @ UW | TA @ UW | Researcher @ UW",
 	cards: [
 		{
 			title: "My website",

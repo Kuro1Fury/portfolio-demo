@@ -1,36 +1,32 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from 'next/link'
+import Link from 'next/link';
 import styles from './Chunk.module.css';
 
-export const Education = ({ title, chunks }) => {
+export const Experience = ({ title, chunks }) => {
     return (
-        <div id="education" className="bg-secondary py-5 px-5">
+        <div id="experience" className="bg-light py-5 px-5">
             <div className="container">
-                <h1 className="text-primary fw-bold">Education</h1>
+                <h1 className="text-primary fw-bold">Experience</h1>
                 <div className="d-flex flex-row flex-wrap justify-content-center">
                     {chunks.map((value, index) => (
                         <Chunk
                             key={index}
+                            company={value.company}
                             title={value.title}
                             date={value.date}
-                            degree={value.degree}
                             location={value.location}
-                            courses={value.courses}
-                            GPA={value.GPA}
-                        // icons={value.icons} 
+                            description={value.description}
+                            skills={value.skills}
                         />
                     ))}
                 </div>
-                {/* <div className="text-center">
-					<button type="button" className="btn btn-outline-light">See More</button>
-				</div> */}
             </div>
         </div>
     );
 }
 
-export const Chunk = ({ title, date, degree, location, courses, GPA }) => {
+export const Chunk = ({ title, company, date, description, location, skills }) => {
 
     const courseBoxStyle = {
         border: "1px solid #ccc",
@@ -57,44 +53,39 @@ export const Chunk = ({ title, date, degree, location, courses, GPA }) => {
         alignItems: "baseline",
     };
 
-    const degreeStyle = {
-        // bold
-        // fontWeight: "bold",
-        color: "#000",
-        fontSize: "1.1rem",
-        // margin: "0",
-    };
-
     const titleStyle = {
         fontSize: "2rem", // Adjust this value as needed
     };
-
     return (
         <div className={`card py-3 px-3 mx-sm-4 my-4 card-work ${styles.card}`}>
             <div className="card-body">
+
                 <div style={rowStyle}>
-                    <h4 className="text-primary" style={titleStyle}>{title}</h4>
+                    <h4 className="text-primary" style={titleStyle}>{company}</h4>
                     <p className="text-dark">{date}</p>
                 </div>
                 <div style={rowStyle}>
-                    <h5 className="text-dark" style={degreeStyle}>
-                        {degree.split(", ").map((item, index) => (
-                            <React.Fragment key={index}>
-                                {item}
-                                {index < degree.split(", ").length - 1 && <br />}
-                            </React.Fragment>
-                        ))}
+                    <h5 className="text-dark">
+                        {title}
                     </h5>
                     <p className="text-dark">{location}</p>
                 </div>
-                <p className="text-dark">GPA: {GPA}</p>
 
-                {courses && (
+                <div style={rowStyle}>
+                    <div className="text-dark">
+                        <ul>
+                            {description.map((line, index) => (
+                                <li key={index}>{line}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+
+                {skills && (
                     <div>
-                        {/* <p>Related courseworks:</p> */}
-                        {courses.map((course, index) => (
+                        {skills.map((skills, index) => (
                             <div key={index} style={courseBoxStyle}>
-                                <p style={courseTextStyle}>{course}</p>
+                                <p style={courseTextStyle}>{skills}</p>
                             </div>
                         ))}
                     </div>
